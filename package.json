@@ -1,0 +1,29 @@
+{
+  "name": "auryn-elements",
+  "version": "0.0.1",
+  "description": "Auryn Custom Elements for Elementor",
+  "main": "index.js",
+  "scripts": {
+    "make:pot": "node utils/makePot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisterDaniels/auryn-elements-elementor.git"
+  },
+  "keywords": [
+    "elementor",
+    "auryn",
+    "elements",
+    "widgets",
+    "plugin"
+  ],
+  "author": "Daniel Silva <dodosilva51@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MisterDaniels/auryn-elements-elementor/issues"
+  },
+  "homepage": "https://github.com/MisterDaniels/auryn-elements-elementor#readme",
+  "devDependencies": {
+    "wp-pot": "^1.9.1"
+  }
+}

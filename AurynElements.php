@@ -5,13 +5,15 @@ namespace AurynElements;
 use AurynCategories;
 
 /**
- * Plugin Name: Auryn Custom Elements
- * Description: Custom elements for Auryn
+ * Plugin Name: Auryn Elements
+ * Description: Custom elements for Auryn.
  * Plugin URI: https://www.auryn.com.br
  * Version: 0.0.1
  * Author: Auryn
  * Author URI: https://www.auryn.com.br
  * Text Domain: auryn-elements
+ * Domain Path: /languages/
+ * License: MIT
  */
 
 if (!defined('ABSPATH')) exit;
@@ -29,11 +31,18 @@ class AurynElements {
     }
 
     public function init() {
+        add_action('init', array($this, 'loadPluginTranslation'));
+
         add_action('elementor/elements/categories_registered', array(
             $this, 'AddCustomCategories'));
 
         add_action('elementor/widgets/widgets_registered', array(
             $this, 'registerAurynWidgets'));
+    }
+
+    function loadPluginTranslation() {
+        load_plugin_textdomain('auryn-elements', false, 
+            basename(dirname(__FILE__)).'/languages');
     }
 
     function AddCustomCategories($elementsManager) {
