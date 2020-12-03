@@ -21,7 +21,70 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 msgid "Auryn Elements"
-msgstr "Auryn Elementos"
+msgstr "Elementos Auryn"
 
 msgid "Custom elements for Auryn."
 msgstr "Elementos customizados da Auryn."
+
+msgid "Auryn Elements Settings"
+msgstr "Configurações Elementos Auryn"
+
+msgid "Settings"
+msgstr "Configurações"
+
+msgid "Ops, a wild error appears"
+msgstr "Ops, um erro estranho apareceu"
+
+msgid "Company configuration to Auryn Elements"
+msgstr "Configurações da empresa nos elementos da Auryn"
+
+msgid "Company domain"
+msgstr "Domínio da empresa"
+
+msgid "General"
+msgstr "Geral"
+
+msgid "Must be only the host domain"
+msgstr "Deve ser apenas o domínio da empresa"
+
+msgid "shop.auryn.com.br"
+msgstr "loja.auryn.com.br"
+
+msgid "Is Auryn principal Wordpress"
+msgstr "É o Wordpress principal da Auryn"
+
+msgid "If is the wordpress that serves to all clients"
+msgstr "Se é o Wordpress que serve para todos os clientes"
+
+msgid "Simplified Project Creation"
+msgstr "Criação de projeto simplificada"
+
+msgid "Show book sizes"
+msgstr "Mostrar tamanhos de livros"
+
+msgid "Button text"
+msgstr "Texto do botão"
+
+msgid "Diagram"
+msgstr "Diagramar"
+
+msgid "Type button text"
+msgstr "Coloque o texto do botão"
+
+msgid "Select the size"
+msgstr "Escolha o tamanho"
+
+msgid "Button color"
+msgstr "Cor do botão"
+
+msgid "Button color on hover"
+msgstr "Cor do botão flutuante"
+
+msgid "Button text color"
+msgstr "Cor do texto do botão"
+
+msgid "Button typography"
+msgstr "Tipografia do botão"
+
+msgid "Button shadow"
+msgstr "Sombra do botão"
