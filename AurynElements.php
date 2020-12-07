@@ -7,7 +7,6 @@ use AurynCategories;
 /**
  * Plugin Name: Auryn Elements
  * Description: Custom elements for Auryn.
- * Plugin URI: https://www.auryn.com.br
  * Version: 0.0.1
  * Author: Auryn
  * Author URI: https://www.auryn.com.br
