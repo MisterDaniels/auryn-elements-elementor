@@ -83,7 +83,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 
         if ($isManager) {
             foreach($jsonResponse as $json) {
-                array_push($bookSizes, [[$json['id']] => $json['subdomain']]);
+                array_push($bookSizes, [$json['id'] = $json['subdomain']]);
             }
         } else {
             foreach($jsonResponse as $json) {
