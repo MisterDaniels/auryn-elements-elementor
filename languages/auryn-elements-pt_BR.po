@@ -88,3 +88,6 @@ msgstr "Tipografia do botão"
 
 msgid "Button shadow"
 msgstr "Sombra do botão"
+
+msgid "Select typography"
+msgstr "Tipografia do Select"

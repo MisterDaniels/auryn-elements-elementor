@@ -82,3 +82,6 @@ msgstr ""
 
 msgid "Button shadow"
 msgstr ""
+
+msgid "Select typography"
+msgstr ""

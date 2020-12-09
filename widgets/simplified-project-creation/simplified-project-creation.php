@@ -83,7 +83,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 
         if ($isManager) {
             foreach($jsonResponse as $json) {
-                array_push($bookSizes, [[$json['id']] = $json['subdomain']]);
+                array_push($bookSizes, [[$json['id']] => $json['subdomain']]);
             }
         } else {
             foreach($jsonResponse as $json) {
@@ -162,7 +162,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 			'style_section',
 			[
 				'label' => $this->get_title(),
-				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE
 			]
 		);
 
@@ -177,7 +177,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 					'value' => \Elementor\Scheme_Color::COLOR_1
                 ],
                 'selectors' => [
-					'{{WRAPPER}} .action a' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .action a' => 'background-color: {{VALUE}}'
 				]
             ]
         );
@@ -193,7 +193,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 					'value' => \Elementor\Scheme_Color::COLOR_2
                 ],
                 'selectors' => [
-					'{{WRAPPER}} .action a:hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .action a:hover' => 'background-color: {{VALUE}}'
 				]
             ]
         );
@@ -209,7 +209,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 					'value' => \Elementor\Scheme_Color::COLOR_3
                 ],
                 'selectors' => [
-					'{{WRAPPER}} .action a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .action a' => 'color: {{VALUE}}'
 				]
             ]
         );
@@ -220,7 +220,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 				'name' => 'button_typography',
 				'label' => __( 'Button typography', 'auryn-elements' ),
 				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .action a',
+				'selector' => '{{WRAPPER}} .action a'
 			]
         );
         
@@ -229,11 +229,21 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 			[
 				'name' => 'button_shadow',
 				'label' => __( 'Button shadow', 'auryn-elements' ),
-				'selector' => '{{WRAPPER}} .action a',
+				'selector' => '{{WRAPPER}} .action a'
 			]
 		);
 
-		$this->end_controls_section();
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'select_typography',
+				'label' => __( 'Select typography', 'auryn-elements' ),
+				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_2,
+				'selector' => '{{WRAPPER}} .book-size select'
+			]
+        );
+
+        $this->end_controls_section();
     }
 
 }
