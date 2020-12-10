@@ -105,15 +105,17 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 
         if (array_key_exists('companyDomain', $_GET)) {
             $companyDomain = $_GET['companyDomain'];
-            $bookSizes = $this->getBookSizesForCompany($_GET['companyDomain']);
+            $bookSizes = $this->getBookSizesForCompany($companyDomain);
         }
 
         if ($isPrincipalWordpress != '1') {
-            $bookSizes = $this->getBookSizesForCompany(get_option( 'company_domain' ));
+            $companyDomain = get_option( 'company_domain' );
+            $bookSizes = $this->getBookSizesForCompany($companyDomain);
             $activatedBookSizes = $settings['show_book_sizes'];
         }
         
         $data = json_encode([
+            'company' => $companyDomain,
             'bookSizes' => $bookSizes,
             'activatedBookSizes' => $activatedBookSizes
         ]);
