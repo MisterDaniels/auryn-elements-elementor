@@ -59,7 +59,7 @@ jQuery( window ).on( 'elementor/frontend/init', () => {
             const selectElement = e.target;
             const selectedBookSize = jQuery(selectElement).find(':selected').val();
 
-            jQuery(buttonRedirectElement).attr('href', `${bookSizesData.companyDomain}/fotolivros/
+            jQuery(buttonRedirectElement).attr('href', `https://${bookSizesData.company}/fotolivros/
                 createSimpleProject?bookSize=${ selectedBookSize }`);
             jQuery(buttonRedirectElement).attr('bookSize', selectedBookSize);
         });
