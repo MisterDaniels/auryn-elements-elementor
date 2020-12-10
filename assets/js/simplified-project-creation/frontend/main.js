@@ -64,7 +64,7 @@ jQuery( window ).on( 'elementor/frontend/init', () => {
         });
 
         jQuery(buttonRedirectElement).on('click', (e) => {
-            window.location = jQuery(e.target).attr('href');
+            window.top.location.href = jQuery(e.target).attr('href');
         });
 
         jQuery(buttonRedirectElement).attr('bookSize', '');
