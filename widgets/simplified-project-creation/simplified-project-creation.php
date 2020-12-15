@@ -67,7 +67,7 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
     }
 
     public function getBookSizesForCompany($companyDomain, $isManager = false) {
-        $response = wp_remote_get("https://{$companyDomain}/publicData/getActiveCompaniesDomain", 
+        $response = wp_remote_get("https://{$companyDomain}/v1/livros/tamanhos", 
             array(
                 'methods'  => 'GET'
             )
@@ -83,13 +83,13 @@ class SimplifiedProjectCreation extends Elementor\Widget_Base {
 
         if ($isManager) {
             foreach($jsonResponse as $json) {
-                array_push($bookSizes, [$json['id'] = $json['subdomain']]);
+                array_push($bookSizes, [$json['bookSizeId'] = $json['bookSizeName']]);
             }
         } else {
             foreach($jsonResponse as $json) {
                 array_push($bookSizes, [ 
-                    'id' => $json['id'],
-                    'name' => $json['subdomain'] 
+                    'id' => $json['bookSizeId'],
+                    'name' => $json['bookSizeName'] 
                 ]);
             }
         }
