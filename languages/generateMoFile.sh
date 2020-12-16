@@ -1,0 +1,1 @@
+msgfmt -o auryn-elements-pt_BR.mo auryn-elements-pt_BR.po
